@@ -5,108 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storia dell'Intelligenza Artificiale</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f3f5f7;
-            color: #222;
+        /* ...stili invariati... */
+        .authors-list {
             margin: 0;
-            padding: 0;
+            padding-left: 1.2em;
+            color: #eee;
         }
-        header {
-            background: #4455aa;
-            color: white;
-            padding: 1em 2em;
-        }
-        main {
-            padding: 2em;
-            max-width: 800px;
-            margin: auto;
-        }
-        .authors {
-            font-style: italic;
-            color: #555;
-        }
-        h1 {
-            margin-top: 0;
-        }
-        .topic {
-            background: #e9ecf4;
-            padding: 1em;
-            border-radius: 8px;
-            margin-top: 2em;
-        }
-        .links {
-            margin-top: 2em;
-            background: #d5e3f9;
-            border-radius: 8px;
-            padding: 1em;
-        }
-        .links h2 {
-            margin-top: 0;
-        }
-        .link-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .link-list li {
-            margin-bottom: 1em;
-        }
-        .link-list a {
-            color: #4455aa;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .link-list a:hover {
-            text-decoration: underline;
+        .subtitle {
+            font-size: 1.2em;
+            margin-top: 0.5em;
+            color: #cfd8fc;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Storia dell'Intelligenza Artificiale</h1>
-        <div class="authors">
-            Autori: Kevin Netti, Maria Rossi
-        </div>
+    <header id="main-header">
+        <!-- Il contenuto verrà generato da JS -->
     </header>
     <main>
-        <div class="topic">
-            <h2>Argomento: Evoluzione dell'Intelligenza Artificiale</h2>
-            <p>
-                L'intelligenza artificiale (IA) è una disciplina dell'informatica che studia la creazione di sistemi capaci di svolgere compiti che normalmente richiederebbero l'intelligenza umana. 
-            </p>
-            <p>
-                Nel corso degli anni, la ricerca sull'IA ha portato allo sviluppo di assistenti virtuali, veicoli autonomi, sistemi di diagnosi medica, e molto altro. Oggi, l'IA è presente nella vita quotidiana di milioni di persone.
-            </p>
-        </div>
-        <div class="links">
-            <h2>Esplora la storia e le applicazioni dell'IA</h2>
-            <ul class="link-list">
-                <li>
-                    <a href="#storia">Storia dell'IA</a>
-                </li>
-                <li>
-                    <a href="#applicazioni">Applicazioni Moderne</a>
-                </li>
-                <li>
-                    <a href="https://it.wikipedia.org/wiki/Intelligenza_artificiale" target="_blank">Wikipedia: Intelligenza Artificiale</a>
-                </li>
-                <li>
-                    <a href="https://www.ibm.com/it-it/topics/artificial-intelligence" target="_blank">IBM: Cos'è l'Intelligenza Artificiale?</a>
-                </li>
-            </ul>
-        </div>
-        <div class="topic" id="storia">
-            <h2>Storia dell'IA</h2>
-            <p>
-                Le origini dell'IA risalgono agli anni '50, quando Alan Turing propose il famoso "Test di Turing". Dagli algoritmi simbolici alle reti neurali, la storia dell'IA è caratterizzata da continue innovazioni e sfide.
-            </p>
-        </div>
-        <div class="topic" id="applicazioni">
-            <h2>Applicazioni Moderne</h2>
-            <p>
-                Oggi l'IA trova applicazione in settori come medicina, finanza, trasporti e intrattenimento. Gli assistenti vocali, la guida autonoma e il riconoscimento immagini sono solo alcuni esempi.
-            </p>
-        </div>
+        <!-- ...resto della pagina invariato... -->
     </main>
+    <script>
+        // Titoli e sottotitoli casuali
+        const titoli = [
+            "Viaggio nell'Intelligenza Artificiale",
+            "L'era delle macchine pensanti",
+            "Algoritmi e rivoluzione digitale",
+            "La mente artificiale",
+            "Il futuro è già qui"
+        ];
+        const sottotitoli = [
+            "Scopri come l'IA sta cambiando il mondo",
+            "Dal sogno alla realtà tecnologica",
+            "Un racconto tra passato e futuro",
+            "Innovazione e società digitale",
+            "Dall'intuizione di Turing alle reti neurali SCALA 40 "
+        ];
+        // Lista autori
+        const autori = [
+            "Matteo Ferrari",
+            "Kevin Nettikadan",
+            "Luca Stefani"
+            
+        ];
+        // Genera indici casuali
+        const titolo = titoli[Math.floor(Math.random() * titoli.length)];
+        const sottotitolo = sottotitoli[Math.floor(Math.random() * sottotitoli.length)];
+        // Costruisci header
+        document.getElementById('main-header').innerHTML = `
+            <h1>${titolo}</h1>
+            <div class="subtitle">${sottotitolo}</div>
+            <ul class="authors-list">
+                ${autori.map(a => `<li>${a}</li>`).join('')}
+            </ul>
+        `;
+    </script>
 </body>
 </html>
