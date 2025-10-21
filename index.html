@@ -3,62 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storia dell'Intelligenza Artificiale</title>
+    <title>Guerra e Sofferenza nel Mondo</title>
     <style>
-        /* ...stili invariati... */
-        .authors-list {
+        body {
+            background: #222;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding-left: 1.2em;
-            color: #eee;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2em auto;
+            background: #303030;
+            border-radius: 12px;
+            padding: 2em;
+            box-shadow: 0 2px 14px #0005;
+        }
+        h1 {
+            text-align: center;
+            color: #ffb300;
+            margin-bottom: 0.3em;
         }
         .subtitle {
+            text-align: center;
+            color: #90caf9;
             font-size: 1.2em;
-            margin-top: 0.5em;
-            color: #cfd8fc;
+            margin-bottom: 1em;
+        }
+        .authors-list {
+            text-align: center;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2em;
+        }
+        .authors-list li {
+            display: inline-block;
+            margin: 0 1em;
+            color: #b3e5fc;
+        }
+        .topics {
+            margin-top: 1.5em;
+        }
+        .topic {
+            background: #424242;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            padding: 1em;
+            transition: background 0.3s;
+        }
+        .topic:hover {
+            background: #616161;
+        }
+        .topic-title {
+            font-weight: bold;
+            color: #ffc107;
+            margin-bottom: 0.4em;
+        }
+        .topic-content {
+            font-size: 1em;
+            color: #ececec;
+        }
+        /* Interattività */
+        .toggle-btn {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 0.4em 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 1em;
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
-    <header id="main-header">
-        <!-- Il contenuto verrà generato da JS -->
-    </header>
-    <main>
-        <!-- ...resto della pagina invariato... -->
-    </main>
+    <div class="container">
+        <h1>Guerra e Sofferenza nel Mondo</h1>
+        <div class="subtitle">Gruppo: Scala40</div>
+        <ul class="authors-list">
+            <li>Matteo Ferrari</li>
+            <li>Kevin Nettikadan</li>
+            <li>Luca Stefani</li>
+        </ul>
+        <button class="toggle-btn" onclick="toggleTopics()">Mostra/Nascondi Argomenti</button>
+        <div class="topics" id="topics" style="display:none;">
+            <div class="topic">
+                <div class="topic-title">Cause dei Conflitti</div>
+                <div class="topic-content">
+                    Le guerre spesso nascono da questioni politiche, religiose, economiche o territoriali. Le risorse naturali, i confini e le differenze culturali sono spesso al centro dei conflitti.
+                </div>
+            </div>
+            <div class="topic">
+                <div class="topic-title">Conseguenze Umanitarie</div>
+                <div class="topic-content">
+                    La guerra causa milioni di morti, feriti, rifugiati e sfollati. Le popolazioni civili subiscono traumi psicologici e la distruzione delle infrastrutture vitali come ospedali e scuole.
+                </div>
+            </div>
+            <div class="topic">
+                <div class="topic-title">Sofferenza dei Bambini</div>
+                <div class="topic-content">
+                    I bambini sono tra le vittime più vulnerabili: perdono la scuola, la casa, la famiglia e sono spesso costretti a fuggire o arruolarsi come soldati.
+                </div>
+            </div>
+            <div class="topic">
+                <div class="topic-title">Impatto Economico</div>
+                <div class="topic-content">
+                    I conflitti distruggono l'economia locale, bloccano il commercio e portano povertà estrema, rendendo difficile la ripresa anche dopo la fine della guerra.
+                </div>
+            </div>
+            <div class="topic">
+                <div class="topic-title">Ruolo delle Organizzazioni Umanitarie</div>
+                <div class="topic-content">
+                    Organizzazioni come Croce Rossa, ONU e Medici Senza Frontiere aiutano le vittime dei conflitti fornendo cibo, cure mediche e protezione, ma le difficoltà operative sono enormi.
+                </div>
+            </div>
+            <div class="topic">
+                <div class="topic-title">Speranza e Ricostruzione</div>
+                <div class="topic-content">
+                    Nonostante tutto, molte comunità trovano la forza di ricostruire e promuovere la pace attraverso il dialogo, l’istruzione e la cooperazione internazionale.
+                </div>
+            </div>
+            <!-- Aggiungi altri argomenti se necessario -->
+        </div>
+    </div>
     <script>
-        // Titoli e sottotitoli casuali
-        const titoli = [
-            "Viaggio nell'Intelligenza Artificiale",
-            "L'era delle macchine pensanti",
-            "Algoritmi e rivoluzione digitale",
-            "La mente artificiale",
-            "Il futuro è già qui"
-        ];
-        const sottotitoli = [
-            "Scopri come l'IA sta cambiando il mondo",
-            "Dal sogno alla realtà tecnologica",
-            "Un racconto tra passato e futuro",
-            "Innovazione e società digitale",
-            "Dall'intuizione di Turing alle reti neurali SCALA 40 "
-        ];
-        // Lista autori
-        const autori = [
-            "Matteo Ferrari",
-            "Kevin Nettikadan",
-            "Luca Stefani"
-            
-        ];
-        // Genera indici casuali
-        const titolo = titoli[Math.floor(Math.random() * titoli.length)];
-        const sottotitolo = sottotitoli[Math.floor(Math.random() * sottotitoli.length)];
-        // Costruisci header
-        document.getElementById('main-header').innerHTML = `
-            <h1>${titolo}</h1>
-            <div class="subtitle">${sottotitolo}</div>
-            <ul class="authors-list">
-                ${autori.map(a => `<li>${a}</li>`).join('')}
-            </ul>
-        `;
+        function toggleTopics() {
+            const topics = document.getElementById('topics');
+            topics.style.display = topics.style.display === 'none' ? 'block' : 'none';
+        }
     </script>
 </body>
 </html>
